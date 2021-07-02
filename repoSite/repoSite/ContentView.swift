@@ -9,8 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                 EmptyStateView()
+            }
+            .navigationBarTitle("repoSite")
+        }
+    }
+}
+
+struct EmptyStateView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            Image(systemName: "paperplane.fill")
+                .font(.system(size: 90))
+                .padding(.bottom)
+            Text("A Site of repositories")
+                .font(.title)
+            Spacer()
+        }
+        .padding()
+        .foregroundColor(Color(.systemBlue))
+
     }
 }
 
